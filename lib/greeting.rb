@@ -11,6 +11,8 @@
 # afternoon: 12 - 19: Good Afternoon!
 # night: 20 - 05: Good night
 
+# the point is to be able to call Greeting.new(3).afternoon? and see if it is true or not
+
 class Greeting
 
   attr_accessor :hour
