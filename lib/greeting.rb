@@ -23,15 +23,16 @@ class Greeting
   end
 
   def say
+    greeting = "Good %s!"
     if (6..11) === @hour
         morning?
-        "Good Morning!" 
+        greeting % "Morning" 
     elsif (12..19) === @hour
         afternoon? 
-        "Good Afternoon!" 
+        greeting % "Afternoon" 
     elsif (20..24) === @hour || (0..5) === @hour
         night?
-        "Good Night!" 
+        greeting % "Night" 
     else
         "This is not a valid time"
     end # end if statement
