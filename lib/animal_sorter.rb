@@ -29,7 +29,7 @@ class AnimalSorter
       end # end if 
     end # end animal block
 
-    [sea_animals, land_animals]
+    [sea_animals, land_animals] # creates nested array
   end # end to_a
 
 end # end class

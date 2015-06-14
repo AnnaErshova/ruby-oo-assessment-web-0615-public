@@ -12,7 +12,7 @@ class Temperature
   end # end initialize
 
   def status
-    if @temperature < 22 && @temperature > 14
+    if (15..21) === @temperature
       "comfortable"
     elsif @temperature >= 22 
       "hot"

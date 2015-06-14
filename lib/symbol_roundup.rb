@@ -15,11 +15,8 @@
 
 class Array
   def symbol_roundup
-    new_array = Array.new
     self.select do |test|
-      if test.class == Symbol
-        new_array << test
-      end # end if statement
+        [] << test if test.class == Symbol
     end # end self block
   end # end method
 end # end class

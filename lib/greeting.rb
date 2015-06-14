@@ -19,16 +19,17 @@ class Greeting
 
   def initialize(hour)
     @hour = hour
+    # can intiialize status and switch it to true when method is called
   end
 
   def say
-    if @hour >= 6 && @hour <= 11
+    if (6..11) === @hour
         morning?
         "Good Morning!" 
-    elsif @hour >= 12 && @hour <= 19
+    elsif (12..19) === @hour
         afternoon? 
         "Good Afternoon!" 
-    elsif @hour >= 20 && @hour <= 24 || @hour >= 0 && @hour <= 5
+    elsif (20..24) === @hour || (0..5) === @hour
         night?
         "Good Night!" 
     else
@@ -37,15 +38,15 @@ class Greeting
   end # end method say
 
   def morning?
-    @hour >= 6 && @hour <= 11 ? true : false
+    (6..11) === @hour ? true : false
   end
 
   def afternoon?
-    @hour >= 12 && @hour <= 19 ? true : false
+    (12..19) === @hour ? true : false
   end
 
   def night?
-    @hour >= 20 && @hour <= 24 || @hour >= 0 && @hour <= 5 ? true : false
+    (20..24) === @hour || (0..5) === @hour ? true : false
   end
 
 end # end class

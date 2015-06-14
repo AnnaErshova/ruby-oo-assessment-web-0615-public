@@ -4,20 +4,11 @@
 # e.g ["ich", "ni", "san"].make_list #=> ["1. ich", "2. ni", "3. san"]
 
 class Array
-
   def make_list
-    hash = Hash.new
     new_array = Array.new
-
-    self.each_with_index do |word, index|
-      hash[index+1] = word
+    self.each_with_index do |word, index| # normally ["1" => ich, "2" => ni, "3" => san]
+      new_array << "#{index+1}. #{word}" # remake into array right away
     end # end self
-
-    hash.each do |ind, w|
-        new_array << "#{ind}. #{w}"
-    end # end hash
-    
   new_array
   end # end make_list
-
 end # end class

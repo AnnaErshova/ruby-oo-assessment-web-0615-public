@@ -15,13 +15,7 @@ class Integer
     # To make things easier, assume the variable `the_number`
     # is the number you are testing.
     # the_number = self 
-    (self > min && self < max) ? true : false 
+    (min..max)  === self ? true : false # or use (min..max).member_of?(self)
   end
 
 end
-
-
-#Integer #is_between? returns true if the number is between the two numbers
-#     Failure/Error: expect(15.is_between?(12, 18)).to eq(true)
-#     ArgumentError:
-#       wrong number of arguments (2 for 0)

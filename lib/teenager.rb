@@ -16,7 +16,7 @@ class Person
   end
 
   def is_a_teenager?
-    (@age < 13 || @age > 19) ? false : true
+    (13..19) === @age ? true : false
   end
 
 end # end class
