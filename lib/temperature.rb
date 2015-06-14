@@ -9,7 +9,7 @@ class Temperature
 
   def initialize(temperature)
     @temperature = temperature
-  end
+  end # end initialize
 
   def status
     if @temperature < 22 && @temperature > 14
@@ -18,7 +18,7 @@ class Temperature
       "hot"
     else
       "cold"
-    end
-  end
+    end # end if statement
+  end # end status method
 
-end
+end # end Temperature class
